@@ -3,12 +3,14 @@
 //divs should appear as a grid; utilize flexbox 
 
 const grid_container = document.getElementById("grid_container");
-const column = document.getElementById("column");
+
 
 function createGrid() {
 
-    //for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 16; i++) {
         
+        const column = document.createElement("div");
+
         //creates a column of 16 divs showns as squares
         for (let j = 0; j < 16; j++) {
 
@@ -17,11 +19,11 @@ function createGrid() {
             //adds a node to the end of the list of children of specified parent node
             column.appendChild(square);
         }
-        // const columndiv = document.createElement("div");
-        // columndiv.setAttribute("class", "columndiv");
-        // grid_container.appendChild(columndiv); 
+ 
+        column.setAttribute("class", "column");
+        grid_container.appendChild(column); 
 
-    //}
+    }
 }
 
 createGrid();

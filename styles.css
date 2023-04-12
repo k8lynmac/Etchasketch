@@ -5,7 +5,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     height: 100vh;
-    background-color: orchid;
+    background-color: rgb(204, 147, 228);
 }
 
 
@@ -15,23 +15,17 @@ body {
     width: 20px;
     height: 20px;
     border-style: solid; 
-    border-color: black;
-    border-width: 2px 4px 2px 4px;
+    border-color: rgb(177, 67, 182);
+    border-width: 2px 2px 2px 2px;
     flex: 1;
 }
 
-
-/*set style for container of 16 
-.gridline {
+/*set style for 16 columns*/
+.column {
     background-color: white;
-    width: 20px;
-    height: 20px;
-    border-style: solid; 
-    border-color: aqua;
-    border-width: 10px 4px 2px 4px;
-    display: flex;
+    flex: 1;
 }
 
 #grid_container {
     display: flex;
-}*/
+}
