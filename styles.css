@@ -2,29 +2,42 @@
 body {
     display: flex; 
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 auto;
     height: 100vh;
-    background-color: rgb(204, 147, 228);
+    background-color: rgb(181, 234, 232);
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    flex-direction: column;
+}
+.header {
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 24px;
+    color: #01435f;
 }
 
 /*set style for each square element*/
 .square {
     background-color: white;
-    width: 20px;
-    height: 20px;
     border-style: solid; 
-    border-color: rgb(177, 67, 182);
-    border-width: 2px 2px 2px 2px;
-    flex: 1;
+    border-color: rgb(57, 170, 196);
+    border-width: 2px;
+    width: 20px;
+    height: 20px; 
 }
 
-/*set style for 16 columns*/
+/*set style for width columns*/
 .column {
     background-color: white;
     flex: 1;
 }
 
+/*set style for width*width grid*/
 #grid_container {
     display: flex;
+    height: 600 px;
+    width: 600 px; 
+
 }
