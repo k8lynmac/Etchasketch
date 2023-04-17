@@ -8,12 +8,13 @@ function createGrid(width) {
     let area = width*width;
     for (let i = 0; i < area; i++) {
         const square = document.createElement("div");
-        grid_container.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
-        grid_container.style.gridTemplateRows = `repeat(${width}, 1fr)`;
         square.setAttribute("class", "square");
         grid_container.appendChild(square); 
-        changeColors();
     }
+
+    grid_container.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
+    grid_container.style.gridTemplateRows = `repeat(${width}, 1fr)`;
+    changeColors();
 }
 
 //function that adds an event to each div and changes the color 
@@ -38,9 +39,9 @@ function getDimensions() {
         btn.addEventListener('click', function() {
                 do {
                     width = prompt("Enter the number of squares per side (<100) for your new grid.");
+                    removeChildren();
+                    createGrid(width);
                 } while (width > 100);
-                removeChildren();
-                createGrid(width);
             });
         });
  }
